@@ -29,20 +29,21 @@ Academic Integrity Statement:
 
 def main():
 
-    year = int(input('Please input a year: '))
-    if year%100 == 0:
-        if year%400 == 0:
+    year = int(input('Please input a year: ')) #Takes an input and converts it to int
+
+    if year%100 == 0: #Is the year divisible by 100?
+        if year%400 == 0: #Is the year ALSO divisible by 400?
             LeapYear = True
         else:
             LeapYear = False
 
-    elif year%4 == 0:
+    elif year%4 == 0: #Is the year divisible by 4, given that it is NOT divisible by 100?
         LeapYear = True
 
-    else:
+    else: #None of the above conditions are true
         LeapYear = False
 
-    year = str(year)
+    year = str(year) #converts year back into string for printing purposes
     if LeapYear == True:
         print('In the year '+year+', February has 29 days.')
     else:
