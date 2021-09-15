@@ -31,19 +31,19 @@ def main():
 
     year = int(input('Please input a year: '))
     if year%100 == 0:
-        if year%4 ==0:
+        if year%400 == 0:
             LeapYear = True
         else:
             LeapYear = False
+
     elif year%4 == 0:
-        if year%100 == 0:
-            LeapYear == True
-        else:
-            LeapYear == False
+        LeapYear = True
+
     else:
-        False
+        LeapYear = False
+
     year = str(year)
-    if LeapYear:
+    if LeapYear == True:
         print('In the year '+year+', February has 29 days.')
     else:
         print('In the year '+year+', February has 28 days.')
